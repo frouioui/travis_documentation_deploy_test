@@ -8,13 +8,12 @@ notifications:
   email: false
 
 script:
-  - mkdir docs || false
-  - echo "HELLO" > ./docs/index.html
+  - echo "HELLO" > ./index.html
 
 deploy:
   provider: pages
   skip_cleanup: true
-  github_token: $GITHUB_TOKEN # Set in travis-ci.org dashboard
+  github_token: $GITHUB_TOKEN
   keep_history: true
   on:
     branch: master
